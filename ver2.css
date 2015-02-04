@@ -1,0 +1,24 @@
+.gist-table a{
+  white-space: pre-wrap;
+  background-color: #438FFF;
+  color: #fff;
+  //border: 1px solid #86D5FF;
+  padding: 0 0.2em;
+  //padding-bottom: 0.12em;
+}
+
+.gist-tags {
+    margin-left:0.5em;
+    background-color: #F8DB2C;
+} 
+.gist-tags a {
+}
+.gist-table {
+    width: 20em;
+    padding: 0 1em;    
+}
+.gist-table a {
+    padding: 0.1em 0.2em;
+    float: left;
+    margin: 0.3em;
+}
