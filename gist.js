@@ -88,6 +88,8 @@
         }
         return linkString;
     };
+
+
     
     $(document).ready(function() {
         $(function() {   
@@ -120,8 +122,12 @@
                     
                     var tagsNav = '';
                     var sizeAll = 0;
-                    var prevSize = 0;
-                    for (var t in tags_hash) {
+                    var sorted = Object.keys(tags_hash).sort(function(a, b) {
+                        return (tags_hash[b].length - tags_hash[a].length);
+                    });
+
+                    for (var i=0; i<sorted.length; i++) {
+                        var t = sorted[i];
                         var size = tags_hash[t].length;
                         sizeAll += size;
                         var c = '';
@@ -130,14 +136,11 @@
                         }
                         var tagStr = ('<a href="#"' + c + 'data-tag="'
                                         + t + '">' + t +'(' + size + ')' + '</a>');
-                        if (size <= prevSize) {
-                            tagsNav += tagStr;
-                        } else {
-                            tagsNav = tagStr + tagsNav;
-                        }
-                        prevSize = size;
+                        tagsNav += tagStr;
                     }
+                    
                     var c = '';
+                    
                     if (curTag === undefined) {
                         c = ' class="current" ';
                     }
