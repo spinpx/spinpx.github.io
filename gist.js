@@ -134,7 +134,8 @@
                             tagsNav += tagStr;
                         } else {
                             tagsNav = tagStr + tagsNav;
-                        }                        
+                        }
+                        prevSize = size;
                     }
                     var c = '';
                     if (curTag === undefined) {
