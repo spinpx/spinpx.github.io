@@ -48,8 +48,10 @@
                 tags_hash[tt] = [index];
             } else {
                 tags_hash[tt].push(index);
+                
             }
         }
+        
         // store info
         item.html_url = data.html_url;
         item.tags = tags;
@@ -89,21 +91,18 @@
     
     $(document).ready(function() {
         $(function() {   
-            //var url = 'https://api.github.com/users/spinpx/gists';
-            var url = './test.json';
-            var target = $("#gist-list");
-            var loading = $('#gist-loading');
-            var title = $('h1.title');
-            var backAll = $('<span class="gist-tags back-to-all">/ <a href = "#">back to All</a> /</span>');
+            var url = 'https://api.github.com/users/spinpx/gists';            
+            //var url = 'http://cnmpp902.gitcafe.io/test.json';
+            var list = $('#gist-list');
+            var nav = $('#tags-nav');
+            var loading = $('#loading');            
             
             var args = getArgs();
             curTag = args.tag;
                         
             if (curTag !== undefined) {
-                title.text('My Gists - Tag:' + curTag);
-                target.prepend(backAll);
-            }
-
+                
+            }            
             $.ajax({
                 url: url,
                 dataType: 'jsonp',
@@ -114,51 +113,58 @@
                     for (var i=0; i < len; i++) {
                         var result = storeItem(data[i], i);
                         if (curTag === undefined || (items[i].tags.indexOf(curTag) >= 0)){
-                            target.append(genGistItem(result));
+                            list.append(genGistItem(result));
                         }
                     }
-                    
                     loading.hide();
-
-                    if (curTag !== undefined && tags_hash[curTag] == undefined) {
-                        target.html("<p>没有这个 tag 哦！</p>").prepend(backAll);
-                    }
                     
-                    // tags cloud
-                    var table = $('#table-of-contents');
-                    var tagTable = '<h2>Tags Cloud</h2><div class="gist-table">';
+                    var tagsNav = '';
+                    var sizeAll = 0;
+                    var prevSize = 0;
                     for (var t in tags_hash) {
-                        var size = tags_hash[t].length/len;                        
-                        tagTable += ('<a href="#" class="gist-tag-table" style="font-size:'
-                                     + Math.log10(size*100)
-                                     + 'em" data-tag="'
-                                     + t + '">' + t + '</a>');
+                        var size = tags_hash[t].length;
+                        sizeAll += size;
+                        var c = '';
+                        if (t === curTag) {
+                            c = ' class="current" ';
+                        }
+                        var tagStr = ('<a href="#"' + c + 'data-tag="'
+                                        + t + '">' + t +'(' + size + ')' + '</a>');
+                        if (size <= prevSize) {
+                            tagsNav += tagStr;
+                        } else {
+                            tagsNav = tagStr + tagsNav;
+                        }                        
                     }
-                    tagTable += '</div>';
-                    table.append(tagTable);
+                    var c = '';
+                    if (curTag === undefined) {
+                        c = ' class="current" ';
+                    }
+                    tagsNav = ('<a href="#"' + c + '>All(' + sizeAll + ')</a>') + tagsNav;
+                    
+                    nav.append(tagsNav);
                     
                     $(window).scroll(function() {                        
                     });
                 }
             });
             
-            $('#content').on('click', '.gist-tags a, .gist-table a', function(e) {
-                curTag = $(e.currentTarget).data('tag');
-                target.html('');
+            $('#container').on('click', '.gist-tags a, #tags-nav a', function(e) {
+                var ele = $(e.currentTarget);
+                curTag = ele.data('tag');
+                list.html('');
                 var indexs = tags_hash[curTag];
+                $('#tags-nav a').removeClass('current');
+                ele.addClass('current');
                 if(curTag === undefined) {
                     for(var i = 0; i < items.length; i++) {
-                        target.append(genGistItem(items[i]));
+                        list.append(genGistItem(items[i]));
                     }
-                    title.text('My Gists');
-                    $('.back-to-all').remove();
                 }
                 else {
                     for(var j=0; j < indexs.length; j++){
-                        target.append(genGistItem(items[indexs[j]]));
+                        list.append(genGistItem(items[indexs[j]]));
                     }                
-                    title.text('My Gists - Tag:' + curTag);
-                    target.prepend(backAll);                    
                 }
                 e.preventDefault();
             });

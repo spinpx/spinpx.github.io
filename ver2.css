@@ -1,24 +1,51 @@
-.gist-table a{
+html {
+    background-color: #F6F4EC;
+}
+body {
+    text-align: center;    
+}
+a {
+    color: #387AD1;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+li {
+    //margin-bottom: 0.3em;
+    line-height: 2em;
+}
+#container {
+    font-size: 0.9em;
+    display: inline-block;
+    width: 45em;
+    text-align: left;
+}
+#logo {
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.1em;
+    font-size: 2.8em;
+    color: #f00;
+}
+
+#tags-nav a{
   white-space: pre-wrap;
   background-color: #438FFF;
   color: #fff;
-  //border: 1px solid #86D5FF;
-  padding: 0 0.2em;
-  //padding-bottom: 0.12em;
+  padding: 0.1em 0.2em;
+  margin-right: 0.2em;
 }
-
-.gist-tags {
+#tags-nav .current {
+    background-color: #2a2c96;
+}
+#tags-nav {
+    margin-bottom: 0.5em;
+}
+#gist-list .gist-tags {
     margin-left:0.5em;
     background-color: #F8DB2C;
 } 
-.gist-tags a {
-}
-.gist-table {
-    width: 20em;
-    padding: 0 1em;    
-}
-.gist-table a {
-    padding: 0.1em 0.2em;
-    float: left;
-    margin: 0.3em;
-}
+
+
