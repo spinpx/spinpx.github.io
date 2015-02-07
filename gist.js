@@ -121,7 +121,6 @@
                     loading.hide();
                     
                     var tagsNav = '';
-                    var sizeAll = 0;
                     var sorted = Object.keys(tags_hash).sort(function(a, b) {
                         return (tags_hash[b].length - tags_hash[a].length);
                     });
@@ -129,7 +128,6 @@
                     for (var i=0; i<sorted.length; i++) {
                         var t = sorted[i];
                         var size = tags_hash[t].length;
-                        sizeAll += size;
                         var c = '';
                         if (t === curTag) {
                             c = ' class="current" ';
@@ -144,7 +142,7 @@
                     if (curTag === undefined) {
                         c = ' class="current" ';
                     }
-                    tagsNav = ('<a href="#"' + c + '>All(' + sizeAll + ')</a>') + tagsNav;
+                    tagsNav = ('<a href="#"' + c + '>All(' + items.length + ')</a>') + tagsNav;
                     
                     nav.append(tagsNav);
                     
