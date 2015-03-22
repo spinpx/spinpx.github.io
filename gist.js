@@ -158,6 +158,7 @@
                 var indexs = tags_hash[curTag];
                 $('#tags-nav a').removeClass('current');
                 ele.addClass('current');
+                $('#tags-nav a[data-tag="' + curTag + '"]').addClass('current');
                 if(curTag === undefined) {
                     for(var i = 0; i < items.length; i++) {
                         list.append(genGistItem(items[i]));
