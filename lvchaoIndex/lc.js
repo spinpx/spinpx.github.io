@@ -1,3 +1,4 @@
+$(document).ready(
 (function() {
     var mPages = $('#content');
     var mHeader = $('header');
@@ -45,7 +46,7 @@
     setInterval(function() {
         slideImgs.css('margin-left', slideOffset);
         slideOffset = slideOffset - 1;
-        if(0 - slideOffset > slidesWidth) {
+        if($(window).width() - slideOffset > slidesWidth) {
             slideOffset = 0;
         }
     }, 50);
@@ -94,4 +95,4 @@
         default: return;
         }
     });
-})();
+}));
