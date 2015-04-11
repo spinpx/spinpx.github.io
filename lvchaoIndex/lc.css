@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+}
+#content {
+    position: fixed;
+    top: 0;
+    padding-top: 4.25em;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block;
+    transition-duration: 1s;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    background-color: #fff;
+    padding: 0.5em 0;
+    transition-duration: 1s;
+}
+
+#logo {
+    padding: 0.5em 0;
+    height: 3em;
+    padding-right: 3em;
+    transition-duration: 1s;
+}
+
+.expand-h {
+    padding: 3em 0;
+}
+.expand-h #logo{
+    height: 5em;
+    padding-right: 0;
+}
+.expand-h span{
+    display: block;
+}
+#nav {
+    padding-left: 0;
+    clear:both;
+    display: inline-block;
+}
+#nav li{
+    list-style-type: none;
+    float: left; 
+    margin: 0 1em;
+    padding: 0;
+}
+#nav li a {
+    color: #81C380;
+    border: 1px solid #81C380;
+    border-radius: 5px;
+    padding: 0.4em 1em;
+    font-size: 1.2em;
+    line-height: 1.2em;    
+}
+#nav li a:hover {
+    background-color: #81C380;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+}
+
+/* seas */
+#sea {
+    opacity: 0;
+    transition-duration: 2s;
+    z-index: 3;
+    width: 100%;
+    text-align: left;
+}
+#sea img {    
+    z-index:3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* next icon  */
+#next {
+    transition-duration: 1s;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    display: block;
+}
+#next img{
+    padding: 1em;
+    border-radius: 10px;
+}
+#next img:hover {
+    background-color: rgba(0,0,111,0.4);
+}
+
+/* pages */
+.page{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* 1st-page */
+#main-page {
+    background: url("./main.jpg") #fff no-repeat center;
+}
+
+/* 2nd-page */
+#spirt {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    display: inline-block;
+}
+#spirt span{
+    font-size: 3em;
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.2em;
+}
+#spirt p {
+    text-align: left;
+    float: left;
+    border: 1px solid #81C380;
+    height: 8em;
+    width: 38em;
+    padding: 0.5em 1em;
+}
+#slide-win {
+    height: 14em;
+    width: 100%;
+    overflow: hidden;
+}
+#slide-imgs{
+    height: 14em;
+}
+
+#slide-imgs img {
+    float: left;
+    padding: 1em 0.5em;
+    height: 12em;
+}
+#slide-imgs img:hover {
+    height: 14em;
+    padding: 0 0.5em;
+}
+
+#food {
+    background: url("./food.jpg") #fff no-repeat center;
+    background-size: 100% 100%;
+}
+
+#join {
+    background: url("./join.jpg") #fff no-repeat center;
+    background-size: 100% 100%;
+}
+#join .title{
+    height: 10em;
+    text-align: left;
+    margin-left: 5em;
+    padding-top: 2em;
+}
+#join .title img{
+    height: 100%;
+    float: left;
+    margin-right: 2em;
+}
+#join .title p {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: bold;
+}
+#join .title span {
+    color: #4C7B4F;
+}
+#join .msg{
+    text-align: left;
+    margin: 1em 15%;
+    background-color:  rgba(255, 255, 255, 0.7);
+    color: #4C7B4F;
+    padding: 0.2em 2em;
+    font-size: 1.2em;
+}
+#join .msg span{
+    display: block;
+    text-align: right;
+}
