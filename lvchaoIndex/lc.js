@@ -26,6 +26,7 @@ $(document).ready(
         }
         index++;
         gogo();
+        e.preventDefault();
     };
     var goPrev = function(e) {
         if (index == 0) {
@@ -33,9 +34,10 @@ $(document).ready(
         }
         index--;
         gogo();
+        e.preventDefault();
     };
     
-    $('#next img').click(goNext);
+    $('#next a').click(goNext);
 
     setTimeout(function() {
         var slides = $('#slide-imgs img');
