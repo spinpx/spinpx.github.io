@@ -18,14 +18,14 @@
             $('#sea').css('opacity', 1);
             mHeader.removeClass('expand-h');
         }
-        if (index === 3){
+        if (index === 4){
             $('#next').css('opacity', 0);
         }  else {
             $('#next').css('opacity', 1);
         }
     };
     var goNext = function(e) {
-        if (index == 3) {
+        if (index == 4) {
             return;
         }
         index++;
@@ -53,9 +53,7 @@
 
     $('.page-link').click(function(e) {
         var ele = $(e.currentTarget);
-        console.log(ele);
         index = ele.data('index');
-        console.log(index);
         gogo();
         e.preventDefault();
     });
