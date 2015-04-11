@@ -113,7 +113,13 @@ a {
 #main-page {
     background: url("./main.jpg") #fff no-repeat center;
 }
-
+#main-page p{
+    color: #42865D;
+    padding-left: 12em;
+    font-size: 3em;
+    padding-top: 6.5em;
+    margin: 0;
+}
 /* 2nd-page */
 #spirt {
     padding-top: 2em;
@@ -121,18 +127,24 @@ a {
     display: inline-block;
 }
 #spirt span{
-    font-size: 3em;
+    font-size: 2.5em;
     float: left;
     padding-right: 1em;
     padding-top: 0.2em;
 }
 #spirt p {
+    margin-top: 0.5em;
     text-align: left;
     float: left;
     border: 1px solid #81C380;
-    height: 8em;
-    width: 38em;
-    padding: 0.5em 1em;
+    padding: 1em 3em;
+    width: 50em;
+}
+#spirt p span {
+    padding: 0;
+    padding-right: 0.5em;
+    color: #81C380;
+    font-size: 2em;
 }
 #slide-win {
     height: 14em;
@@ -173,19 +185,10 @@ a {
     float: left;
     margin-right: 2em;
 }
-#join .title p {
-    margin: 0;
-    padding: 0.5em;
-    font-size: 2.5em;
-    color: #fff;
-    font-weight: bold;
-}
-#join .title span {
-    color: #4C7B4F;
-}
+
 #join .msg{
     text-align: left;
-    margin: 1em 15%;
+    margin: 1em 13em;
     background-color:  rgba(255, 255, 255, 0.7);
     color: #4C7B4F;
     padding: 0.2em 2em;
@@ -194,4 +197,64 @@ a {
 #join .msg span{
     display: block;
     text-align: right;
+}
+#join .msg p{
+    font-style: bold;
+}
+#follow a {
+    position: fixed;
+    top: 10em;
+    color: #4C7B4F;
+    z-index:5;
+    width: 1em;
+    padding:  0.5em;
+    background-color: #fff;
+    border: 1px solid #81C380;
+    border-radius: 5px;
+    margin: 0 1em;
+}
+#follow a:hover {
+    background-color: #81C380;
+    color: #fff;
+}
+#weibo {
+    right: 0;
+}
+
+#weixin img {
+    position: relative;
+    top: 10em;
+    left: 3em;
+    z-index: 5;
+    background-color: #fff;
+    border: 1px solid #81C380;
+    border-radius: 5px;
+    display: none;
+}
+
+#weixin:hover img{
+    display: block;
+}
+
+#map {
+    margin: 3em 0;
+    margin-left: 15em;
+    float: left;
+}
+#address {
+    width: 425px;
+    margin: 3em 0;
+    background-color: #fff;
+    border: 1px solid #81C380;
+    float: left;
+    margin-left: 2em;
+    height: 350px;
+    padding: 0 1em;
+    text-align: left;
+}
+#address span {
+    display: inline-block;
+    width: 5em;
+    color: #81C380;
+    font-style: bold;
 }
