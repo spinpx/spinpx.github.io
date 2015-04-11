@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif;
 }
 #content {
     position: fixed;
@@ -56,15 +57,15 @@ header {
     padding: 0;
 }
 #nav li a {
-    color: #81C380;
-    border: 1px solid #81C380;
+    color: #3DA948;
+    border: 1px solid #3DA948;
     border-radius: 5px;
     padding: 0.4em 1em;
     font-size: 1.2em;
     line-height: 1.2em;    
 }
 #nav li a:hover {
-    background-color: #81C380;
+    background-color: #3DA948;
     color: #fff;
 }
 a {
@@ -127,6 +128,7 @@ a {
     display: inline-block;
 }
 #spirt span{
+    font-style: bold;
     font-size: 2.5em;
     float: left;
     padding-right: 1em;
@@ -136,14 +138,14 @@ a {
     margin-top: 0.5em;
     text-align: left;
     float: left;
-    border: 1px solid #81C380;
+    border: 1px solid #3DA948;
     padding: 1em 3em;
     width: 50em;
 }
 #spirt p span {
     padding: 0;
     padding-right: 0.5em;
-    color: #81C380;
+    color: #3DA948;
     font-size: 2em;
 }
 #slide-win {
@@ -167,7 +169,7 @@ a {
 
 #food {
     background: url("./food.jpg") #fff no-repeat center;
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 
 #join {
@@ -188,10 +190,11 @@ a {
 
 #join .msg{
     text-align: left;
-    margin: 1em 13em;
+    margin: 1em 10em;
+    display: inline-block;
     background-color:  rgba(255, 255, 255, 0.7);
-    color: #4C7B4F;
-    padding: 0.2em 2em;
+    color: #3DA948;
+    padding: 2em 3em;
     font-size: 1.2em;
 }
 #join .msg span{
@@ -199,22 +202,22 @@ a {
     text-align: right;
 }
 #join .msg p{
-    font-style: bold;
+    font-weight: bold;
 }
 #follow a {
     position: fixed;
     top: 10em;
-    color: #4C7B4F;
+    color: #3DA948;
     z-index:5;
     width: 1em;
     padding:  0.5em;
     background-color: #fff;
-    border: 1px solid #81C380;
+    border: 1px solid #3DA948;
     border-radius: 5px;
     margin: 0 1em;
 }
 #follow a:hover {
-    background-color: #81C380;
+    background-color: #3DA948;
     color: #fff;
 }
 #weibo {
@@ -227,7 +230,7 @@ a {
     left: 3em;
     z-index: 5;
     background-color: #fff;
-    border: 1px solid #81C380;
+    border: 1px solid #3DA948;
     border-radius: 5px;
     display: none;
 }
@@ -245,7 +248,7 @@ a {
     width: 425px;
     margin: 3em 0;
     background-color: #fff;
-    border: 1px solid #81C380;
+    border: 1px solid #3DA948;
     float: left;
     margin-left: 2em;
     height: 350px;
@@ -255,6 +258,6 @@ a {
 #address span {
     display: inline-block;
     width: 5em;
-    color: #81C380;
-    font-style: bold;
+    color: #3DA948;
+    font-weight: bold;
 }
