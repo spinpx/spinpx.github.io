@@ -3,11 +3,6 @@
     var mHeader = $('header');
     var index = 0;
     
-    var slides = $('#slide-imgs img');
-    var slidesWidth = slides.length * slides.outerWidth() + 100;
-    var slideImgs = $('#slide-imgs');
-   slideImgs.width(slidesWidth);
-
     var gogo = function() {
         mPages.css('top', '-' + index + '00%');
 
@@ -41,6 +36,10 @@
     
     $('#next img').click(goNext);
     
+    var slides = $('#slide-imgs img');
+    var slidesWidth = slides.length * slides.outerWidth() + 100;
+    var slideImgs = $('#slide-imgs');
+    slideImgs.width(slidesWidth);
     
     var slideOffset = 0;    
     setInterval(function() {
