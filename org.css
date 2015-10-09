@@ -17,34 +17,14 @@ img {
   max-width: 50em;
 }
 
-.nav {
-    margin: 1em 0;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 0.3em;
-    
-}
-.nav .logo {
-    font-size: 2.8em;
-    color: #f00;      
-}
-.nav .logo:hover {
-    text-decoration: none;
-}
-.nav ul {
-    display: inline;
-}
-.nav li {
-    display: inline;
-}
-
-#update {
+#postamble {
+    float: left;
+    font-size: 0.8em;
     border-top: 1px dashed #ddd;
-    color: #444;
 }
-#disqus_thread {
-  padding: 0.5em, 2em;
+#postamble p{
+    margin-right: 2em;
 }
-
 @media all {
   html {
     margin: 0;
@@ -886,13 +866,3 @@ td, th {
     vertical-align: top;
 }
 
-.gist .file-data {
-    font-size:0.9em!important;
-}
-
-.lines tbody {
-    border: 0px solid #fff!important;
-}
-.gist .line-data {
-    padding: 0.5em !important;
-}
