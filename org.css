@@ -17,14 +17,15 @@ img {
   max-width: 50em;
 }
 
-#postamble {
-    float: left;
+#postamble {   
     font-size: 0.8em;
     border-top: 1px dashed #ddd;
 }
 #postamble p{
+    float: left;
     margin-right: 2em;
 }
+
 @media all {
   html {
     margin: 0;
