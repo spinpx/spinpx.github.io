@@ -879,4 +879,15 @@ td {
 td, th {
     vertical-align: top;
 }
+@media screen and (max-width : 480px){
+    #table-of-contents {
+        display: none;
 
+    }
+    body #content {
+        margin: 1em;
+    }
+    body {
+        margin-right: 0;
+    }
+}
