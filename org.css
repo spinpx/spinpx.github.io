@@ -188,7 +188,7 @@ img {
     overflow: auto;
   }
   pre span {
-      background-color: #FAF4F2;
+      background-color: #FAF4F2 !important;
   }
   pre.src {
       overflow: auto;
