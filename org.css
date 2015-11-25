@@ -75,7 +75,7 @@ img {
       overflow: auto;
       width: 20em;
   }
-  #table-of-contents {
+  #table-of-contents ul, #table-of-contents ol{
       padding-left: 1.2em;
   }
   #table-of-contents h2 {
