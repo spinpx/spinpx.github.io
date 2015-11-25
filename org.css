@@ -879,7 +879,7 @@ td {
 td, th {
     vertical-align: top;
 }
-@media screen and (max-width : 480px){
+@media screen and (max-width : 600px){
     #table-of-contents {
         display: none;
 
