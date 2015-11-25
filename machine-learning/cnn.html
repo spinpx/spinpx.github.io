@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2015-11-26 Thu 00:47 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes of CNN</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Spinpx" />
+<link rel="stylesheet" type="text/css" href="http://spinpx.com/org.css"/>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div class = "nav">
+    <ul>
+    <li><a class = "logo" href="/index.html">SPinPx</a><li>
+	<li><a href="/posts.html"> Posts </a></li>
+	<li><a href="/notes.html"> Notes </a></li>
+	<li><a href="/about.html"> About </a></li>
+    </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Notes of CNN</h1>
+
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">UFLDL</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+<a href="http://ufldl.stanford.edu/tutorial/supervised/ConvolutionalNeuralNetwork/">link</a>
+</p>
+</div>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">Overview</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<p>
+The architecture of a CNN is designed to take advantage of the 2D structure of an input image. This is achieved with local connections and tied weights followed by some form of pooling which results in translation invariant features. 
+</p>
+
+<p>
+Another benefit of CNNs is that they are easier to train and have many fewer parameters than fully connected networks with the same number of hidden units.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">Architecture</h3>
+<div class="outline-text-3" id="text-orgheadline3">
+<p>
+A CNN consists of a number of convolutional and subsampling layers optionally followed by fully connected layers. 
+</p>
+
+<ul class="org-ul">
+<li>The input to a convolutional layer is a m x m x r image. The convolutional layer will have k filters (or kernels) of size n x n x q. (n &lt; m, q &lt;= r). The size of the filters gives rise to the locally connected structure which are each convolved with the image to produce k feature maps of size m−n+1.</li>
+<li>Each map is then subsampled typically with mean or max pooling over p x p contiguous regions where p ranges between 2 for small images (e.g. MNIST) and is usually not more than 5 for larger inputs.</li>
+<li>Either before or after the subsampling layer an additive bias and sigmoidal nonlinearity is applied to each feature map.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4">Back Propagation</h3>
+<div class="outline-text-3" id="text-orgheadline4">
+<ul class="org-ul">
+<li>The upsample operation has to propagate the error through the pooling layer by calculating the error w.r.t to each unit incoming to the pooling layer.</li>
+<li>Finally, to calculate the gradient w.r.t to the filter maps, we rely on the border handling convolution operation again and flip the error matrix \(\delta^{l}_{k}\) the same way we flip the filters in the convolutional layer.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5">Exercise</h3>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6">Deep Learning-Yoshua Bengio, Ian Goodfellow and Aaron Courville</h2>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7">Nando de Freitas</h2>
+<div class="outline-text-2" id="text-orgheadline7">
+<p>
+<a href="https://www.youtube.com/watch?v=bEUX_56Lojc&amp;list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu&amp;index=13">link</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8">Understanding Convolutions</h2>
+<div class="outline-text-2" id="text-orgheadline8">
+<p>
+<a href="http://colah.github.io/posts/2014-07-Understanding-Convolutions/">link</a>
+</p>
+</div>
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9">the standard definition2 of convolution</h3>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10">Conv-Nets-Modular</h2>
+<div class="outline-text-2" id="text-orgheadline10">
+<p>
+<a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">link</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p id="update">Last Updated : 2015-11-26 Thu 00:47 , Created by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.3.2)</p>
+</div>
+</body>
+</html>

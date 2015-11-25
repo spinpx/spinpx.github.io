@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2015-11-26 Thu 00:47 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Firmware Analysis</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Spinpx" />
+<link rel="stylesheet" type="text/css" href="http://spinpx.com/org.css"/>
+</head>
+<body>
+<div id="preamble" class="status">
+<div class = "nav">
+    <ul>
+    <li><a class = "logo" href="/index.html">SPinPx</a><li>
+	<li><a href="/posts.html"> Posts </a></li>
+	<li><a href="/notes.html"> Notes </a></li>
+	<li><a href="/about.html"> About </a></li>
+    </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Firmware Analysis</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">[Paper] When Firmware Modifications Attack: A Case Study of Embedded Exploitation</a></li>
+<li><a href="#orgheadline3">[Workshop] Embedded Devices Security and Firmware Reverse Engineering</a>
+<ul>
+<li><a href="#orgheadline2">5.1</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline4">[TOOL] binwalk</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">[Paper] When Firmware Modifications Attack: A Case Study of Embedded Exploitation</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<ul class="org-ul">
+<li>Power by ? Soc, architecture(ARM)</li>
+<li>SPI chip dumper,  Arduino</li>
+<li>boot loader code</li>
+<li>IDA Pro, IDA-Python scripts</li>
+<li>No authentication prior to firmware update</li>
+
+<li>VULNERABLE DEVICE POPULATION ANALYSIS</li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">[Workshop] Embedded Devices Security and Firmware Reverse Engineering</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+</div><div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">5.1</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<div class="org-src-container">
+
+<pre class="src src-sh">mount -o loop xx.img /mnt
+hdiutil attach -readonly xx.img <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">OS X</span>
+</pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre class="src src-sh">arm-none-eabi-objdump -b binary -m arm -D xx.bin
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">[TOOL] binwalk</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+<ul class="org-ul">
+<li><a href="https://github.com/devttys0/binwalk/wiki/Quick-Start-Guide">guide</a></li>
+<li>With command: <code>dd</code>, <code>man dd</code> for detail.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p id="update">Last Updated : 2015-11-26 Thu 00:47 , Created by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.3.2)</p>
+</div>
+</body>
+</html>
