@@ -1,3 +1,6 @@
+.nav ul li {
+    display: inline;
+}
 blockquote {
     border-left: 0.5em solid #F8DB2C;
     background-color: #FBECA0;
