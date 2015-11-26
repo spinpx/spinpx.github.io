@@ -82,7 +82,7 @@ img {
       //background-color: #fff;
   }
   #table-of-contents:hover {
-      width: inherit;
+      //width: inherit;
   }
   #table-of-contents ul, #table-of-contents ol{
       padding-left: 2em;
