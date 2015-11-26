@@ -22,6 +22,7 @@ img {
 #postamble {
     font-size: 0.88em;
     text-align: right;
+    padding: 1em 3em;
 }
 #postamble p {
     float: right;
@@ -55,7 +56,7 @@ img {
     margin-right: 20em;
   }
   body #content{
-      margin: 2em 7em;      
+      margin: 2em 10%;      
   }
   body .title {
       font-style: italic;
@@ -77,14 +78,20 @@ img {
       height: 100%;
       overflow: auto;
       width: 20em;
+      //width: 2em;
+      //background-color: #fff;
+  }
+  #table-of-contents:hover {
+      width: inherit;
   }
   #table-of-contents ul, #table-of-contents ol{
       padding-left: 2em;
   }
+ 
   #table-of-contents h2 {
     font-size: 1.5em;
     max-width: 9em;
-    padding-left: 1.2em;
+    padding: 0 1.5em;
     border: 0;
     font-weight: normal;
   }
@@ -95,7 +102,8 @@ img {
     color: #000;
   }
   #text_table_of_contents {
-    margin-bottom: 55px;
+    //margin-bottom: 55px;
+    padding: 0 1em;
   }
   #license {
     /* padding: .3em; */
