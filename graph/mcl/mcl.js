@@ -8,7 +8,8 @@ You need to visualize the final clustering results in your program, one color pe
 var MCL = {
     current: 'honey',
     exp_p: 2,
-    inf_p: 2
+    inf_p: 2,
+    epochs: 50
 };
 
 (function() {
@@ -58,7 +59,7 @@ function mcl(g, e, r) {
     g = mtx_normalize(g);
     var prev_g = [];
     //show_mtx(g);
-    var epochs = 100;
+    var epochs = MCL.epochs;
     while (!mtx_eq(prev_g, g) && epochs--) {
         prev_g = g;
         g = clone(g);
@@ -249,7 +250,13 @@ function update_para(e) {
 }
 
 function draw(g, c) {
-    var s = "strict graph { rankdir=LR; ranksep = 0.1; nodesep = 0.2; splines=false;  node[height=0.02, width=0.02, fontsize=8];  size=\"14,15!\"";
+    var s = "strict graph { rankdir=LR;  splines=false;";
+    if (g.length > 30) {
+        s += "ranksep = 0.1; nodesep = 0.2;"; 
+    }
+    if (g.length > 50) {
+        s += "node[height=0.02, width=0.02, fontsize=8];  size=\"14,15!\"";
+    }
     s+= colorful(c);
     for (var i = 0; i < g.length; i++) {
         for (var j = 0; j < g[i].length; j++) {
