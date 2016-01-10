@@ -13,20 +13,36 @@
          background-color: #eee;
          padding: 2em;
      }
+     #current-data{
+         border-color: red;
+     }
     </style>
   </head>
   <body>
       <header>
       <h2>Graph -- The Markov Cluster ALgorithm</h2>
-      <h4>Chen Peng (<a href="./mcl.js">Code</a>)</h4>
-      <div>
-      <label for="nodenum">Node number:</label>
-		  <input type="number" value="10", min="10", max="20" name="nodenum" id="nodenum" onchange="redraw(event);">
+      <h4>Chen Peng (Code:<a href="./mcl.js">mcl.js</a>, <a href="./mci2json.oy">mci2json.py</a>)</h4>
+      <div id="select-data">
+    <input type="button" value="honey" id="current-data" onclick="switch_data(event)">
+    <input type="button" value="lattice" onclick="switch_data(event)">
+    <input type="button" value="falkner" onclick="switch_data(event)">
+    <input type="button" value="proteins" onclick="switch_data(event)" disabled>
+      </div>
+      <div id="mcl-paras">
+      <label for="nodenum">Expansion Parameter(E):</label>
+		  <input type="number" value="2", min="1", max="10" name="exp_p" id="exp_p" onchange="update_para(event);">
+      <label for="nodenum">Inflation Parameter(R):</label>
+		  <input type="number" value="2", min="1", max="10" name="inf_p" id="inf_p" onchange="update_para(event);">
       </div>
       </header>
       <div id="graph">Waiting....</div>
+      <div id="report">
+          <p>
+
+          </p>
+      </div>
       <script src="../viz.js"></script>
-      <!--<script src="./mat2.js"></script>-->
+      <script src="./ajax.js"></script>
       <script src="./mcl.js"></script>
   </body>
 </html>
