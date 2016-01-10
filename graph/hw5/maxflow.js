@@ -31,7 +31,6 @@ function maxflow(g) {
         var tmp = find_path_bfs(g, gf);
         label = tmp[0];
         path = tmp[1];
-        console.log(path);
         if (label === 0) {
             break;
         }
@@ -95,7 +94,6 @@ function find_path_bfs(g, gf) {
 		    var v = q.shift();
 		    for (var i = 0; i < g.length; i++) {
             if (isFinite(g[v][i]) && suc[i] === -1 && gf[v][i] > 0) {
-                console.log(i);
                 suc[i] = v;
                 label[i] = Math.min(label[v], gf[v][i]);
                 if (i != t) {
