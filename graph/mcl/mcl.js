@@ -25,7 +25,9 @@ function start_mcl(name) {
         mcl(MCL[name]);
     } else {
         ajax.get(url + file_name).always(function( response, xhr ) {
+            console.log(response)
             var m = new_matrix(response);
+            console.log(m)
             MCL[name] = m; // cache
             mcl(m);
         });
@@ -55,6 +57,7 @@ function mcl(g, e, r) {
     r = r || MCL.inf_p;
     var raw_g = clone(g);
     g = clone(g);
+
     g = add_self_loop(g);
     g = mtx_normalize(g);
     var prev_g = [];
@@ -161,6 +164,7 @@ function mtx_normalize(m) {
 }
 
 function add_self_loop(m) {
+    console.log(m)
     if (m[0][0] === 0) {
         for (var i = 0; i < m.length; i++) {
             m[i][i] = 1;
