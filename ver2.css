@@ -1,5 +1,6 @@
 html {
     text-align: center;  
+    background: #eee;
 }
 body {
     width: 45em; 
@@ -16,7 +17,6 @@ a:hover {
     text-decoration: underline;
 }
 li {
-    //margin-bottom: 0.3em;
     line-height: 2em;
 }
 #container {
@@ -56,7 +56,6 @@ header {
 }
 #gist-list .gist-tags {
     margin-left:0.5em;
-    //background-color: #F8DB2C;
     background-color: #ddd;
 } 
 footer {
