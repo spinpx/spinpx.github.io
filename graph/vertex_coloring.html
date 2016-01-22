@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Graph Homework 4 -- Vertex Coloring</title>
+    
+    <style type="text/css">
+     h2, h4, header div {
+         padding: 3px;
+         margin: 3px;
+     }
+     #graph {
+         background-color: #eee;
+         padding: 2em;
+     }
+    </style>
+  </head>
+  <body>
+      <header>
+      <h2>Grpah Homework 4 -- Vertex Coloring</h2>
+      <h4>Chen Peng (<a href="./vertex_coloring.js">Code</a>)</h4>
+      <div>
+      <label for="nodenum">Node number:</label>
+		  <input type="number" value="10", min="10", max="20" name="nodenum" id="nodenum" onchange="redraw(event);">
+      </div>
+      </header>
+      <div id="graph">Waiting....</div>
+      <script src="./viz.js"></script>
+      <script src="./vertex_coloring.js"></script>
+  </body>
+</html>

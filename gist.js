@@ -1,9 +1,9 @@
+/*
+    ugly code..
+*/
 (function() {
-    // 每个 item 的一些信息    
     var items = [];
-    // tag 的映射
     var tags_hash = {};
-    // current tag
     var curTag = undefined;
     
     var getQuery = function (url) {
@@ -89,12 +89,10 @@
         return linkString;
     };
 
-
     
     $(document).ready(function() {
         $(function() {   
             var url = 'https://api.github.com/users/spinpx/gists';            
-            //var url = 'http://cnmpp902.gitcafe.io/test.json';
             var list = $('#gist-list');
             var nav = $('#tags-nav');
             var loading = $('#loading');            
@@ -121,7 +119,6 @@
                     loading.hide();
                     
                     var tagsNav = '';
-                    var sizeAll = 0;
                     var sorted = Object.keys(tags_hash).sort(function(a, b) {
                         return (tags_hash[b].length - tags_hash[a].length);
                     });
@@ -129,7 +126,6 @@
                     for (var i=0; i<sorted.length; i++) {
                         var t = sorted[i];
                         var size = tags_hash[t].length;
-                        sizeAll += size;
                         var c = '';
                         if (t === curTag) {
                             c = ' class="current" ';
@@ -144,7 +140,7 @@
                     if (curTag === undefined) {
                         c = ' class="current" ';
                     }
-                    tagsNav = ('<a href="#"' + c + '>All(' + sizeAll + ')</a>') + tagsNav;
+                    tagsNav = ('<a href="#"' + c + '>All(' + items.length + ')</a>') + tagsNav;
                     
                     nav.append(tagsNav);
                     
@@ -160,6 +156,7 @@
                 var indexs = tags_hash[curTag];
                 $('#tags-nav a').removeClass('current');
                 ele.addClass('current');
+                $('#tags-nav a[data-tag="' + curTag + '"]').addClass('current');
                 if(curTag === undefined) {
                     for(var i = 0; i < items.length; i++) {
                         list.append(genGistItem(items[i]));
