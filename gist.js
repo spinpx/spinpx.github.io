@@ -1,9 +1,9 @@
+/*
+    ugly code..
+*/
 (function() {
-    // 每个 item 的一些信息    
     var items = [];
-    // tag 的映射
     var tags_hash = {};
-    // current tag
     var curTag = undefined;
     
     var getQuery = function (url) {
@@ -89,12 +89,10 @@
         return linkString;
     };
 
-
     
     $(document).ready(function() {
         $(function() {   
             var url = 'https://api.github.com/users/spinpx/gists';            
-            //var url = 'http://cnmpp902.gitcafe.io/test.json';
             var list = $('#gist-list');
             var nav = $('#tags-nav');
             var loading = $('#loading');            

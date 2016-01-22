@@ -1,12 +1,16 @@
 html {
-    background-color: #F6F4EC;
+    text-align: center;  
 }
 body {
-    text-align: center;    
+    width: 45em; 
+    display: inline-block; 
+    text-align: left;
 }
 a {
+    color: #333;
     color: #387AD1;
     text-decoration: none;
+    
 }
 a:hover {
     text-decoration: underline;
@@ -17,35 +21,52 @@ li {
 }
 #container {
     font-size: 0.9em;
-    display: inline-block;
-    width: 45em;
-    text-align: left;
+    list-style: none;
 }
 #logo {
     margin-top: 0.5em;
-    margin-bottom: 0.2em;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 0.1em;
     font-size: 2.8em;
-    color: #f00;
+    color: #555;
+}
+header {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
 }
 
 #tags-nav a{
   white-space: pre-wrap;
-  background-color: #438FFF;
-  color: #fff;
+  color: #555;
+  border: 1px dashed #999;
   padding: 0.1em 0.2em;
   margin-right: 0.2em;
 }
-#tags-nav .current {
-    background-color: #2a2c96;
+
+#tags-nav .current{
+   border: 1px solid #333;
+   color: #333;
+
+}
+#tags-nav a:hover {
+   text-decoration: none;
+   background-color: #ddd;
 }
 #tags-nav {
     margin-bottom: 0.5em;
 }
 #gist-list .gist-tags {
     margin-left:0.5em;
-    background-color: #F8DB2C;
+    //background-color: #F8DB2C;
+    background-color: #ddd;
 } 
+footer {
+    font-size: 0.8em;
+    width: 56.4em;
+    color: #555;
+    position: absolute;
+    bottom: 0.2em;
+    padding-top: 0.3em;
+    border-top: 1px dashed #ccc;
+}
 
 
