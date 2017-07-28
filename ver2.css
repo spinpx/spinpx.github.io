@@ -1,6 +1,8 @@
 html {
     text-align: center;  
     background: #eee;
+    font-family: Helvetica,Arial,sans-serif; 
+
 }
 body {
     width: 45em; 
@@ -11,7 +13,6 @@ a {
     color: #333;
     color: #387AD1;
     text-decoration: none;
-    
 }
 a:hover {
     text-decoration: underline;
@@ -19,21 +20,47 @@ a:hover {
 li {
     line-height: 2em;
 }
+
 #container {
     font-size: 0.9em;
     list-style: none;
-}
-#logo {
-    margin-top: 0.5em;
-    font-size: 2.8em;
-    color: #555;
-}
-header {
-    border-bottom: 1px dashed #ccc;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.3em;
+    margin: 0.8em 0.5em;
 }
 
+header {
+    padding-top: 0.5em;
+}
+
+#logo {
+    padding-top: 0.3em;
+    padding-bottom: 0.1em;
+    font-size: 2.8em;
+    color: #555;
+    display: inline-block;
+}
+.sp-line {
+    border-top: 1px dashed #ccc;
+    margin: 0.5em 0;
+}
+
+h2 {
+    margin: 0.25em 0;
+}
+
+.smallcap {
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.smallcap::first-letter {
+    text-transform: uppercase;
+}
+
+#intro p{
+    margin: 0.8em 0.5em;
+}
+p {
+    color: #333;
+}
 #tags-nav a{
   white-space: pre-wrap;
   color: #555;
@@ -64,14 +91,11 @@ footer {
     color: #555;
     position: absolute;
     bottom: 0.2em;
-    padding-top: 0.3em;
+    padding: 0.5em 0;
     border-top: 1px dashed #ccc;
     z-index: 3;
 }
 
-#wave-canvas {
-    /*background-color:#FAFAFA;*/
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 8%;
+#personal {
+
 }
