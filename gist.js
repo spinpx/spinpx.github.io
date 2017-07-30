@@ -38,9 +38,10 @@
             tags = data.description.split(/\s*#\s*/);                
         }
         // every files
-        for(var f in data.files) {
-            tags.push(data.files[f].language);
-        }
+        // for(var f in data.files) {
+        //     tags.push(data.files[f].language);
+        // }
+
         // creat tag map
         for (var i=1; i<tags.length; i++) {
             var tt = tags[i] = tags[i].trim();
