@@ -1,8 +1,8 @@
 html {
     text-align: center;  
     background: #eee;
-    font-family: Helvetica,Arial,sans-serif; 
-
+    font-family: Cambria,"Cambaria Math","Times New Roman",ZSung,serif;
+    font-weight: 400;
 }
 body {
     width: 45em; 
@@ -10,7 +10,6 @@ body {
     text-align: left;
 }
 a {
-    color: #333;
     color: #387AD1;
     text-decoration: none;
 }
@@ -32,8 +31,7 @@ header {
 }
 
 #logo {
-    padding-top: 0.3em;
-    padding-bottom: 0.1em;
+    padding: 0.2em 0;
     font-size: 2.8em;
     color: #555;
     display: inline-block;
@@ -86,16 +84,22 @@ p {
     background-color: #ddd;
 } 
 footer {
-    font-size: 0.8em;
-    width: 56.4em;
+    font-size: 0.9em;
     color: #555;
-    position: absolute;
-    bottom: 0.2em;
     padding: 0.5em 0;
-    border-top: 1px dashed #ccc;
-    z-index: 3;
 }
 
 #personal {
+    display: inline-block;
+    float: right;
+    list-style-type: none;
+    font-size: 0.9em;
+    color: #444;
+    margin-top: 3em;
+    margin-bottom: 0;
+}
 
+#personal li {
+    text-align: right;
+    line-height: 1.5em;
 }
