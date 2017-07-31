@@ -1,7 +1,8 @@
 html {
     text-align: center;
     background: #eee;
-    font-family: Cambria,"Cambaria Math","Times New Roman",ZSung,serif;
+    font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
+
     font-weight: 400;
 }
 body {
@@ -58,6 +59,7 @@ h2 {
     text-transform: lowercase;
     font-variant: small-caps;
 }
+
 .smallcap::first-letter {
     text-transform: uppercase;
 }
@@ -120,3 +122,11 @@ footer {
     line-height: 1.5em;
 }
 
+#name-en b {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#name-cn {
+    margin-left: 1em;
+}
