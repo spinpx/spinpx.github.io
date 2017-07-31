@@ -130,3 +130,12 @@ footer {
 #name-cn {
     margin-left: 1em;
 }
+
+.bib-raw-content {
+    display: none;
+}
+.well {
+    margin: 0.1em;
+    padding: 0.1em 1em;
+    background-color: #FFF;
+}
