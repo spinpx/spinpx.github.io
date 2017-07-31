@@ -1,5 +1,5 @@
 html {
-    text-align: center;  
+    text-align: center;
     background: #eee;
     font-family: Cambria,"Cambaria Math","Times New Roman",ZSung,serif;
     font-weight: 400;
@@ -36,6 +36,15 @@ header {
     color: #555;
     display: inline-block;
 }
+
+#logo i {
+    font-weight: bold;
+    display: inline-block;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 0 0.1em;
+}
+
 .sp-line {
     border-top: 1px dashed #ccc;
     margin: 0.5em 0;
@@ -78,6 +87,7 @@ p {
 }
 #tags-nav {
     margin-bottom: 0.5em;
+    word-wrap: break-word;
 }
 #gist-list .gist-tags {
     margin-left:0.5em;
@@ -109,3 +119,4 @@ footer {
     text-align: right;
     line-height: 1.5em;
 }
+

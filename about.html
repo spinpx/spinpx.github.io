@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spinpx</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="author" content="Spinpx(Anthony Chen)" />
+    <link rel="stylesheet" type="text/css" href="./ver2.css" />
+</head>
+
+<body>
+    <header>
+        <div id="logo"><span id="name-en">Chen Peng</span> <span id ="name-cn">陈 鹏</span></div>
+    </header>
+
+    <hr class="sp-line"/>
+    <div id="cv">
+        <a href="http://cancer.shtech.org/~chenpeng/cv.pdf">Curriculum Vitae</a>
+    </div>
+    <hr class="sp-line"/>
+    <div id="projects">
+        <h2 class="smallcap">Projects</h2>
+        <div id="pj-entry">
+            <h3>Security Analysis of Unmanned Aerial Vehicles</h3>
+            <i class="duration">Mar 2015 ─ Sep 2015</i>
+            <p>We studied the risks of UAVs and conducted an empirical analysis of three popular DJI UAVs. We discovered a series of vulnerabilities, including insecure communication channels, misuse of cryptography, and insecure UAV activation and developer authorization.</p>
+        </div>
+
+        <div id="pj-entry">
+            <h3>Source Code Author Deanonymization</h3>
+            <i class="duration">Nov 2015 ─ Jan 2016</i>
+            <p>In this work, we explored neural network based approaches (Recurrent neural network) towards the source code author deanonymization problem. With a dataset extracted from Google Code Jam, our char-level model performs competitively on normal size dataset comparing to previous state-of-art work.</p>
+        </div>
+
+        <div id="pj-entry">
+            <h3>Angora: Efficient, Coverage-Directed Fuzzing</h3>
+            <i class="duration">Oct 2016 ─ May 2017</i>
+            <p>We propose Angora, a new mutation-based fuzzer that outperforms the state-of-the-art fuzzers by a wide margin. We define a measurable objective, branch coverage, and design several key techniques towards this objective, such as scalable, efficient byte-level taint tracking, context-sensitive branch count, and selection of conditional statements that are easier to fuzz.</p>
+        </div>
+    
+    </div>
+    <hr class="sp-line"/>
+    <div id="publications">
+        <h2 class="smallcap">Publications</h2>
+        <div id="bibtex_display">
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./bibtex.js"></script>
+<bibtex src="pub.bib"></bibtex>
+
+</html>
