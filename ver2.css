@@ -86,7 +86,13 @@ p {
 footer {
     font-size: 0.9em;
     color: #555;
-    padding: 0.5em 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+#links {
+    padding-bottom: 0.3em;
 }
 
 #personal {
@@ -95,7 +101,7 @@ footer {
     list-style-type: none;
     font-size: 0.9em;
     color: #444;
-    margin-top: 3em;
+    margin-top: 1.8em;
     margin-bottom: 0;
 }
 
