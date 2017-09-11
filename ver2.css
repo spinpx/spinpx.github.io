@@ -40,6 +40,12 @@ header {
     color: #555;
     display: inline-block;
 }
+#logo img {
+    //display: none;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    width: 1em;
+}
 
 #logo i {
     font-weight: bold;
