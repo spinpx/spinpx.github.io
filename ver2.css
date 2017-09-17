@@ -41,11 +41,9 @@ header {
     height: 1.3em;
     display: inline-block;
 }
+
 #logo img {
-    //display: none;
-    //margin-left: 0.3em;
-    //margin-right: 0.3em;
-    height: 100%;
+   height: 100%;
 }
 
 #logo i {
@@ -57,6 +55,7 @@ header {
 }
 
 .sp-line {
+    border-bottom: 0px dashed #fff;
     border-top: 1px dashed #ccc;
     margin: 0.5em 0;
 }
