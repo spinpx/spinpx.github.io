@@ -1,9 +1,7 @@
 html {
     text-align: center;
     background: #F8F8FA;
-    font-family: Avenir, Optima, Verdana, Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
-
-    font-weight: 400;
+    font-family: 'Nunito', Avernir, TFangsong, FangSong, FangSong_GB2312, serif;
 }
 
 body {
