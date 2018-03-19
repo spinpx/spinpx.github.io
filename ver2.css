@@ -127,6 +127,7 @@ footer {
     padding-bottom: 0.3em;
 }
 
+
 #personal {
     display: inline-block;
     float: right;
@@ -170,4 +171,27 @@ footer {
 
 .pj-entry p {
     margin-top: 0.3em;
+}
+
+#team-list {
+    list-style-type: none;
+    font-size: 0.9em;
+    margin: 0em;
+    padding-left: 0.2em;
+}
+
+#bug-table th {
+    border-bottom: 1px solid #999;
+    padding: 0.5em 1em;
+}
+
+#bug-table td {
+    border-bottom: 1px solid #999;
+    padding: 0.5em 1em;
+}
+
+#bug-table {
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+    background: #fff;
 }
