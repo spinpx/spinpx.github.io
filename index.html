@@ -11,16 +11,19 @@
 
 <body>
     <header>
-        <!-- <div id="logo"><ii>S</ii>pinpx<img src="logo.png"/></div> -->
-        <div id="logo"><img src="logo-all.png"/></div>
+         <div id="logo">
+         <span id="name-en" class="smallcap">
+            <b>C</b>hen
+            <b>P</b>eng</span>
+        <span id="name-cn">陈 鹏</span>
+        </div>
+
 
         <ul id="personal">
             <li>Emai1: spinpx (a) gmai1 </li>
             <li>
-                <a target="_blank" href="https://t.me/spinpx">Telegram</a> |
                 <a target="_blank" href="https://github.com/spinpx">Github</a> |
-                <a target="_blank" href="https://twitter.com/spinpx">Twitter</a> |
-                <a target="_blank" href="https://gist.github.com/spinpx.atom">RSS</a>
+                <a target="_blank" href="https://twitter.com/spinpx">Twitter</a>
             </li>
         </ul>
 
@@ -30,9 +33,80 @@
 
         <h2 class="smallcap">About</h2>
         <p>
-            I am currently a M.S. student in ShanghaiTech University in the area of computer security. My research is mostly focused on fuzzing techniques. I also did things in UAV security, author deanonymization. <br /><a id="more" href="about.html"> MORE ⟿ </a>
+            I currently work at Ant Financial. I got my master's degree from ShanghaiTech University (Adviosr: Prof.Hao Chen) and bachelor's degree from Harbin Institute of Technology. My current research interests are in the areas of software and system security. Here is my <a href="cv.pdf">CV</a>.
         </p>
     </div>
+
+    <hr class="sp-line" />
+    <div id="publications">
+        <h2 class="smallcap">Publications</h2>
+        <div id="bibtex_display">
+            <div class="if bibtex_template" style="display: none;">
+                <span class="if title">
+                    <span class="if !nolink">
+                        <a class="bibtexVar" href="papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+                            <span style="text-decoration: underline;" class="title"></span>,
+                        </a>
+                    </span>
+                    <span class="if nolink">
+                        <span class="title"></span>,
+                    </span>
+                </span>
+
+
+                <div class="if author">
+                    <span class="author"></span>
+                </div>
+                <div>
+                    <span class="if journal">
+                        <em>
+                            <span class="journal"></span>
+                        </em>,</span>
+                    <span class="if booktitle">In
+                        <em>
+                            <span class="booktitle"></span>
+                        </em>,</span>
+                    <span class="if editor">
+                        <span class="editor"></span> (editors),</span>
+                    <span class="if publisher">
+                        <em>
+                            <span class="publisher"></span>
+                        </em>,</span>
+                    <span class="if !journal number">Technical report
+                        <span class="number"></span>,</span>
+                    <span class="if institution">
+                        <span class="institution"></span>,</span>
+                    <span class="if address">
+                        <span class="address"></span>,</span>
+                    <span class="if volume">
+                        <span class="volume"></span>,</span>
+                    <span class="if journal number">(
+                        <span class="number"></span>),</span>
+                    <span class="if pages"> pages
+                        <span class="pages"></span>,</span>
+                    <span class="if month">
+                        <span class="month"></span>,</span>
+                    <span class="if year">
+                        <span class="year"></span>.</span>
+                    <span class="if note">
+                        <span class="note"></span>.</span>
+                    <a class="bibtexVar bib-button" role="button" href="#bib+BIBTEXKEY+" data-toggle="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+                        [bib]
+                    </a>
+                </div>
+                <div class="bibtexVar bib-raw-content" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+                    <div class="well">
+                        <pre><span class="bibtexraw noread"></span></pre>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <span class="bibtextype"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <hr class="sp-line"/>
     <div id="posts">
         <h2 class="smallcap">Posts</h2>
@@ -58,4 +132,57 @@
 
 <script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="./gist.js"></script>
+<script type="text/javascript" src="./bibtex.js"></script>
+
+<script>
+    $('#publications').on('click', 'a.bib-button', function () {
+        var key = "#" + $(this).data("toggle");
+        $(key).toggle("fast", function () {
+        });
+    });
+</script>
+
+
+<textarea id="bibtex_input" style="display:none;">
+
+      @InProceedings {GREYONE,
+        author = 	 {Shuitao Gan and Chao Zhang and Peng Chen and Bodong Zhao and Xiaojun Qin and Dong Wu and Zuoning Chen},
+      title = {{GREYONE}: Data Flow Sensitive Fuzzing},
+      booktitle = {29th {USENIX} Security Symposium ({USENIX} Security 20)},
+      year = {2020},
+      address = {Boston, MA},
+      month = aug,
+      }
+
+      @InProceedings{Matryoshka,
+        author = {Peng Chen and Jianzhong Liu and Hao Chen},
+        title = {Matryoshka: fuzzing deeply nested branches},
+        booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+        date = {2019-11-11/2019-11-15},
+        address = {London, UK},
+      }
+
+      @InProceedings{Angora,
+        author = 	 {Peng Chen, Hao Chen},
+        title = 	 {Angora: efficient fuzzing by principled search},
+        booktitle = {IEEE Symposium on Security and Privacy (S&P)},
+        year= {2018},
+        month= {5},
+        date = 	 {2018-05-21/2018-05-23},
+        address = {San Francisco, CA},
+      }
+
+    @InProceedings{Chen2016UAV,
+        author = 	 {Peng Chen, Hao Chen},
+        title = 	 {Security analysis of personal unmanned aerial vehicles},
+        booktitle = "{International Conference on Security and
+      Privacy in Communication Networks (SECURECOMM)}",
+        year= {2016},
+        month= {10},
+        date = 	 {2016-10-10/2016-10-12},
+        address = 	 {Guangzhou, China},
+    }
+    
+</textarea>
+
 </html>
