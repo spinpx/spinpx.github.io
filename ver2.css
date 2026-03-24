@@ -83,6 +83,21 @@ h3 {
     margin: 0.8em 0.5em;
 }
 
+#opensource .pj-entry {
+    margin: 0.8em 0.5em;
+    padding-left: 0.8em;
+    border-left: 2px solid #ddd;
+}
+
+#opensource .pj-entry h3 {
+    margin: 0;
+}
+
+#opensource .pj-entry p {
+    margin: 0.2em 0 0 0;
+    color: #555;
+}
+
 p {
     color: #333;
 }
