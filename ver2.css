@@ -83,11 +83,28 @@ h3 {
     margin: 0.8em 0.5em;
 }
 
+#intro h2,
+#opensource h2,
+#posts h2 {
+    margin: 0.25em 0.5em;
+}
+
+#publications > div:first-child {
+    margin: 0.25em 0.5em;
+}
+
+#publications > div:first-child h2 {
+    margin: 0;
+}
+
+#bibtex_display {
+    margin: 0.8em 0.5em;
+}
+
 #opensource .oss-entry {
-    margin: 0.15em 0.5em;
-    font-size: 0.88em;
+    margin: 0.3em 0.5em;
     line-height: 1.5em;
-    color: #555;
+    color: #333;
 }
 
 #opensource a {
